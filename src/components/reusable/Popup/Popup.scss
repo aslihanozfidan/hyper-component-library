@@ -1,0 +1,36 @@
+.popupWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, .4);
+
+  .popupInner {
+    position: relative;
+    background-color: map-get($colors, white);
+    width: calc(100% - 400px);
+    height: calc(100% - 400px);
+    margin: 200px;
+
+    @include breakpoint(small) {
+      width: calc(100% - 50px);
+      height: calc(100% - 50px);
+      margin: 25px;
+    }
+
+    .btnClose {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      &::before {
+        content: '\e90a';
+        font-family: 'icomoon';
+        font-size: 12px;
+      }
+    }
+  }
+}
