@@ -1,0 +1,117 @@
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+
+  :global {
+    .slick-slider {
+      position: relative;
+      min-height: 760px;
+      height: 100%;
+
+      @include breakpoint(medium) {
+        padding-bottom: 70px;
+      }
+
+      div {
+        outline: none;
+      }
+
+      .slick-list {
+        height: 100%;
+
+        .slick-slide {
+          display: block;
+          min-height: 800px;
+
+          li {
+            overflow: hidden;
+
+            &:focus {
+              outline: none;
+            }
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+      .slick-dots {
+        @include breakpoint(medium) {
+          bottom: 20px;
+        }
+
+        li {
+          &.slick-active {
+            button {
+              opacity: 1;
+            }
+          }
+
+          button {
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            background-color: map-get($colors, dark-gray);
+            opacity: .2;
+            transition: opacity .6s cubic-bezier(0.19, 1, 0.22, 1);
+
+            &:before {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+
+      .slick-arrow.slick-next {
+        z-index: 9;
+        &:before {
+          content: "\e909";
+          font-family: "icomoon";
+          font-size: 101px;
+          font-weight: 400;
+          color: #848484;
+          position: absolute;
+          transform: rotate(180deg);
+          right: 45.5px;
+
+          @include breakpoint(medium) {
+            font-size: 40px;
+            color: map-get($colors, black);
+          }
+        }
+
+        @include breakpoint(medium) {
+          bottom: 30px;
+          top: auto;
+        }
+      }
+
+      .slick-arrow.slick-prev {
+        z-index: 9;
+        &:before {
+          content: "\e909";
+          font-family: "icomoon";
+          font-size: 101px;
+          font-weight: 400;
+          color: #848484;
+          position: absolute;
+          left: 45.5px;
+
+          @include breakpoint(medium) {
+            font-size: 40px;
+            color: map-get($colors, black);
+          }
+        }
+
+        @include breakpoint(medium) {
+          bottom: 30px;
+          top: auto;
+        }
+      }
+    }
+  }
+}

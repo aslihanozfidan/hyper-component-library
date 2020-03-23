@@ -1,0 +1,29 @@
+.button {
+  font-family: map-get($fonts, primary), serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  display: inline-block;
+  color: #011526;
+  background-color: map-get($colors, orange);
+  outline: none;
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+}
