@@ -1,0 +1,9 @@
+.videoBtn {
+ &:before {
+  content: "\ea1c";
+  font-family: "icomoon";
+  font-size: 60px;
+  color: map-get($colors, white);
+  cursor: pointer;
+ }
+}
