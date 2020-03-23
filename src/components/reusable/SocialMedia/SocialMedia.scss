@@ -1,0 +1,49 @@
+.socialMediaWrapper {
+  position: relative;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    li {
+      height: 20px;
+      margin-right: 10px;
+      padding-right: 0 !important;
+
+      &:last-child {
+        margin-right: 0;
+        @include breakpoint(small) {
+          width: 105px;
+        }
+      }
+
+      .socialMediaIcon {
+        height: 24px;
+        opacity: .5;
+        transition: opacity .2s ease-in;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.darkIcon {
+          opacity: 1;
+          transition: filter .2s ease-in;
+          &:hover {
+            filter: invert(69%) sepia(17%) saturate(1271%) hue-rotate(32deg) brightness(99%) contrast(92%);
+            -webkit-filter: invert(69%) sepia(17%) saturate(1271%) hue-rotate(32deg) brightness(99%) contrast(92%);
+          }
+        }
+
+        img {
+          width: unset;
+        }
+      }
+
+      span {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

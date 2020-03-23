@@ -37,7 +37,7 @@ export default function ShareButtons({
   )
 }
 
-Video.defaultProps = {
+ShareButtons.defaultProps = {
   networks: [
     'facebook',
     'twitter',
@@ -45,7 +45,7 @@ Video.defaultProps = {
   ]
 }
 
-Video.propTypes = {
+ShareButtons.propTypes = {
   alignment: PropTypes.string,
   color: PropTypes.string,
   fontSize: PropTypes.string,
